@@ -1,0 +1,23 @@
+<div class="upload">
+    <div class="select-file">
+        <div class="steps">
+            <div class="file" style="display: none;">
+                <i class="icofont icofont-plus"></i>
+                <input type="file" title="">
+            </div>
+            <div class="file" style="display: none;">
+                <img src="/images/spin.svg" alt="">
+            </div>
+            <div class="file">
+                <i class="icofont icofont-check"></i>
+            </div>
+        </div>
+        <div class="progress-container">
+            <%- include("./progress.ejs") %>
+        </div>
+        <div class="message info auth">
+            <i class="icofont icofont-info"></i>
+            <p>Please login first to upload the file</p>
+        </div>
+    </div>
+</div>

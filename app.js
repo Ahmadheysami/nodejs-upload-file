@@ -14,15 +14,19 @@ dotEnv.config({
     path: "./config/config.env"
 })
 // morgan
-if (env.NODE_ENV == "development") morgan("tiny");
+if (env.NODE_ENV == "development") { morgan("tiny") };
 
 // express file upload
 app.use(fileUpload())
 
 // ejs layouts
+app.use(expressLayout)
 app.set("layout", path.join(__dirname, "views", "layouts", "mainLayout.ejs"))
 // ejs config
 app.set("view engine", "ejs")
+
+// statics
+app.use(express.static(path.join(__dirname, "public")))
 
 // routes
 app.use(require('./routes/index'))

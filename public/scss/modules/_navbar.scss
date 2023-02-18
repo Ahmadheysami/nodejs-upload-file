@@ -1,0 +1,45 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 18px 25px;
+    border-radius:  0 0 10px 10px;
+    background-color: $black;
+    & a {
+        text-decoration: none;
+    }
+    & i {
+        font-size: 28px;
+    }
+    & button {
+        background: none;
+        border: none;
+    }
+    & .auths {
+        & a {
+            @extend %btn;
+        }
+    }
+
+    & .logo {
+        & a {
+            color: $light;
+            font-weight: bold;
+            font-size: 25px;
+            & > strong {
+                font-family: "Matura MT Script Capitals";
+            }
+            & > span {
+                font-family: "Bauhaus 93";
+            }
+        }
+    }
+    .utils {
+        & button {
+            @extend %btn;
+            cursor: pointer;
+        }
+    }
+}
